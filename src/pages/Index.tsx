@@ -24,7 +24,7 @@ const Index = () => {
 
       {/* What is Urban Response */}
       <Section subtitle="Τι είναι" title="Urban Response" background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "60px", alignItems: "center" }} className="md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
           <div>
             <p style={{ fontSize: "18px", color: "#d4d4d4", lineHeight: 1.8, marginBottom: "24px" }}>
               Το Urban Response είναι ένα ανεξάρτητο εκπαιδευτικό framework αστικής ασφάλειας και προσωπικής προστασίας.
@@ -84,7 +84,7 @@ const Index = () => {
 
       {/* Core Pillars */}
       <Section subtitle="Οι βασικοί άξονες" title="Εκπαίδευσης" background="gradient">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "24px" }} className="md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeatureCard
             icon={<Eye size={28} />}
             title="Situational Awareness"
@@ -115,7 +115,7 @@ const Index = () => {
 
       {/* Who It's For */}
       <Section background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "60px" }} className="md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
           {/* For Who */}
           <div 
             style={{ 
@@ -179,14 +179,7 @@ const Index = () => {
 
       {/* Training Structure */}
       <Section subtitle="Πώς γίνεται" title="Η Εκπαίδευση" background="dark">
-        <div 
-          style={{ 
-            display: "grid", 
-            gridTemplateColumns: "repeat(2, 1fr)", 
-            gap: "24px",
-          }}
-          className="md:grid-cols-4"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { number: "01", title: "Επίπεδα", desc: "Levels 1-5" },
             { number: "02", title: "Σενάρια", desc: "Scenario-based training" },
@@ -245,7 +238,7 @@ const Index = () => {
             </h2>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "24px", maxWidth: "800px", margin: "0 auto" }} className="md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
             {[
               "Γιατί τα περισσότερα περιστατικά αποφεύγονται",
               "Γιατί η απόφαση είναι πιο σημαντική από την τεχνική",
