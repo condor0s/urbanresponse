@@ -5,9 +5,9 @@ import HeroSection from "@/components/HeroSection";
 import Section from "@/components/Section";
 import FeatureCard from "@/components/FeatureCard";
 
-import heroImage from "@/assets/hero-night-street.jpg";
-import awarenessImage from "@/assets/awareness-woman.jpg";
-import urbanImage from "@/assets/urban-silhouette.jpg";
+import heroImage from "@/assets/hero-urban-night.jpg";
+import awarenessImage from "@/assets/awareness-eyes.jpg";
+import urbanImage from "@/assets/hero-threat.jpg";
 
 const Index = () => {
   return (

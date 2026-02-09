@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import Section from "@/components/Section";
 import { Target, Eye, CheckCircle, AlertTriangle, Shield, Brain, Move } from "lucide-react";
 
-import threatImage from "@/assets/threat-scenario.jpg";
+import threatImage from "@/assets/hero-threat.jpg";
 
 const Mission = () => {
   return (

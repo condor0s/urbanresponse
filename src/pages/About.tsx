@@ -3,8 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import Section from "@/components/Section";
 import { CheckCircle, Target, Users, BookOpen } from "lucide-react";
 
-import umbrellaImage from "@/assets/umbrella-dark.jpg";
-import awarenessImage from "@/assets/awareness-woman.jpg";
+import umbrellaImage from "@/assets/hero-awareness.jpg";
+import trainingImage from "@/assets/training-scene.jpg";
 
 const About = () => {
   return (
@@ -46,7 +46,7 @@ const About = () => {
           </div>
           <div>
             <img 
-              src={awarenessImage} 
+              src={trainingImage} 
               alt="Φιλοσοφία Urban Response" 
               style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: "4px" }}
             />
