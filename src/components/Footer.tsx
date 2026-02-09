@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid #333333" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "60px 24px 30px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(1, 1fr)", gap: "40px" }} className="md:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & Description */}
           <div>
             <img src={logo} alt="Urban Response" style={{ height: "80px", marginBottom: "20px" }} />
@@ -101,15 +101,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div style={{ 
-          marginTop: "50px", 
-          paddingTop: "30px", 
-          borderTop: "1px solid #1f1f1f",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "10px",
-        }} className="md:flex-row md:justify-between">
+        <div className="mt-[50px] pt-[30px] border-t border-[#1f1f1f] flex flex-col md:flex-row items-center md:justify-between gap-[10px]">
           <p style={{ fontSize: "13px", color: "#737373" }}>
             © {new Date().getFullYear()} Urban Response. Με επιφύλαξη παντός δικαιώματος.
           </p>
