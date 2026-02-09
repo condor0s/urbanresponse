@@ -47,7 +47,7 @@ const Contact = () => {
       </section>
 
       <Section background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "60px" }} className="md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
           {/* Contact Info */}
           <div>
             <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>

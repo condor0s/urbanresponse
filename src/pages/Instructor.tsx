@@ -20,7 +20,7 @@ const Instructor = () => {
       {/* Bio */}
       <Section background="darker">
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "60px", alignItems: "start" }} className="md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[60px] items-start">
             {/* Main Content */}
             <div className="md:col-span-2">
               <p style={{ fontSize: "18px", color: "#d4d4d4", lineHeight: 1.9, marginBottom: "24px" }}>
