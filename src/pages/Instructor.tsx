@@ -21,24 +21,6 @@ const Instructor = () => {
       {/* Bio */}
       <Section background="darker">
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          {/* Instructor Photo */}
-          <div className="flex justify-center mb-12">
-            <div 
-              style={{
-                borderRadius: "8px",
-                overflow: "hidden",
-                border: "4px solid #fe4e00",
-                maxWidth: "400px",
-              }}
-            >
-              <img 
-                src={instructorImage} 
-                alt="Σταύρος Μπαρούτας - Εκπαιδευτής" 
-                style={{ width: "100%", height: "auto", display: "block" }}
-              />
-            </div>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[60px] items-start">
             {/* Main Content */}
             <div className="md:col-span-2">
@@ -57,7 +39,23 @@ const Instructor = () => {
             </div>
 
             {/* Sidebar */}
-            <div>
+            <div className="flex flex-col gap-6">
+              {/* Instructor Photo */}
+              <div 
+                style={{
+                  borderRadius: "8px",
+                  overflow: "hidden",
+                  border: "4px solid #fe4e00",
+                }}
+              >
+                <img 
+                  src={instructorImage} 
+                  alt="Σταύρος Μπαρούτας - Εκπαιδευτής" 
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+              </div>
+              
+              {/* Expertise Box */}
               <div 
                 style={{
                   padding: "30px",
