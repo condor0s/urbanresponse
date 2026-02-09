@@ -41,7 +41,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav style={{ display: "none" }} className="md:flex md:items-center md:gap-8">
+          <nav className="hidden md:flex md:items-center md:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
