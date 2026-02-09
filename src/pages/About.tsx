@@ -76,7 +76,7 @@ const About = () => {
                   textAlign: "center",
                 }}
               >
-                <div style={{ color: "#fe4e00", marginBottom: "20px" }}>{item.icon}</div>
+                <div style={{ color: "#fe4e00", marginBottom: "20px", display: "flex", justifyContent: "center" }}>{item.icon}</div>
                 <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "12px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
                   {item.title}
                 </h4>
