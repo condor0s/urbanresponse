@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import { Award, Globe, Shield, BookOpen } from "lucide-react";
 
 import urbanImage from "@/assets/urban-silhouette.jpg";
+import instructorImage from "@/assets/instructor-stavros.jpg";
 
 const Instructor = () => {
   return (
@@ -20,6 +21,24 @@ const Instructor = () => {
       {/* Bio */}
       <Section background="darker">
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          {/* Instructor Photo */}
+          <div className="flex justify-center mb-12">
+            <div 
+              style={{
+                borderRadius: "8px",
+                overflow: "hidden",
+                border: "4px solid #fe4e00",
+                maxWidth: "400px",
+              }}
+            >
+              <img 
+                src={instructorImage} 
+                alt="Σταύρος Μπαρούτας - Εκπαιδευτής" 
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[60px] items-start">
             {/* Main Content */}
             <div className="md:col-span-2">
