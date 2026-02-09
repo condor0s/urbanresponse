@@ -66,15 +66,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            style={{
-              display: "block",
-              padding: "8px",
-              color: "#f5f5f5",
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-            }}
-            className="md:hidden"
+            className="block md:hidden p-2 text-[#f5f5f5] bg-transparent border-none cursor-pointer"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
