@@ -71,7 +71,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Oswald', 'sans-serif'],
+        heading: ['"Noto Sans Display"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
       borderRadius: {
