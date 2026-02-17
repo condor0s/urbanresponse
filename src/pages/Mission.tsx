@@ -30,7 +30,7 @@ const Mission = () => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
               <Target size={32} style={{ color: "#fe4e00" }} />
-              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                 Αποστολή
               </h3>
             </div>
@@ -50,7 +50,7 @@ const Mission = () => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
               <Eye size={32} style={{ color: "#737373" }} />
-              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                 Όραμα
               </h3>
             </div>
@@ -120,7 +120,7 @@ const Mission = () => {
           </div>
           
           <div style={{ textAlign: "center" }}>
-            <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+            <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
               Η εκπαίδευση είναι:
             </h4>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px" }}>

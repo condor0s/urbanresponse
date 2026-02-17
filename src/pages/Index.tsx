@@ -127,7 +127,7 @@ const Index = () => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "30px" }}>
               <Users size={32} style={{ color: "#fe4e00" }} />
-              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                 Σε ποιους απευθύνεται
               </h3>
             </div>
@@ -157,7 +157,7 @@ const Index = () => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "30px" }}>
               <AlertTriangle size={32} style={{ color: "#737373" }} />
-              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+              <h3 style={{ fontSize: "24px", color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                 Σε ποιους ΔΕΝ απευθύνεται
               </h3>
             </div>
@@ -204,10 +204,10 @@ const Index = () => {
                 e.currentTarget.style.borderColor = "transparent";
               }}
             >
-              <span style={{ fontSize: "48px", fontWeight: 700, color: "#fe4e00", fontFamily: "'Roboto Condensed', sans-serif" }}>
+              <span style={{ fontSize: "48px", fontWeight: 700, color: "#fe4e00", fontFamily: "'Noto Sans Display', sans-serif" }}>
                 {item.number}
               </span>
-              <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginTop: "16px", marginBottom: "8px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+              <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginTop: "16px", marginBottom: "8px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                 {item.title}
               </h4>
               <p style={{ fontSize: "14px", color: "#a3a3a3" }}>{item.desc}</p>
@@ -233,7 +233,7 @@ const Index = () => {
             <p style={{ fontSize: "14px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "3px", color: "#fe4e00", marginBottom: "12px" }}>
               Γιατί
             </p>
-            <h2 style={{ fontSize: "36px", fontWeight: 700, color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+            <h2 style={{ fontSize: "36px", fontWeight: 700, color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
               Urban Response
             </h2>
           </div>
@@ -278,7 +278,7 @@ const Index = () => {
             border: "1px solid #333333",
           }}
         >
-          <h2 style={{ fontSize: "32px", color: "#f5f5f5", marginBottom: "24px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+          <h2 style={{ fontSize: "32px", color: "#f5f5f5", marginBottom: "24px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
             Θες να μάθεις περισσότερα;
           </h2>
           <p style={{ fontSize: "16px", color: "#a3a3a3", marginBottom: "32px", lineHeight: 1.7 }}>

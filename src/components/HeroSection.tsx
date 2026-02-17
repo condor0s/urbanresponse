@@ -90,7 +90,7 @@ const HeroSection = ({
             fontWeight: 700,
             color: "#ffffff",
             marginBottom: "24px",
-            fontFamily: "'Roboto Condensed', sans-serif",
+            fontFamily: "'Noto Sans Display', sans-serif",
             textTransform: "uppercase",
             letterSpacing: "2px",
             lineHeight: 1.1,

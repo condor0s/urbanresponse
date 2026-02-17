@@ -60,7 +60,7 @@ const Section = ({
                   fontSize: "36px",
                   fontWeight: 700,
                   color: "#f5f5f5",
-                  fontFamily: "'Roboto Condensed', sans-serif",
+                  fontFamily: "'Noto Sans Display', sans-serif",
                   textTransform: "uppercase",
                   letterSpacing: "2px",
                 }}
