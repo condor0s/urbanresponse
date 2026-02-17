@@ -71,8 +71,8 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['"Roboto Condensed"', 'sans-serif'],
-        body: ['Roboto', 'sans-serif'],
+        heading: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
