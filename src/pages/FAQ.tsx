@@ -60,7 +60,7 @@ const FAQ = () => {
         <p style={{ fontSize: "14px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "3px", color: "#fe4e00", marginBottom: "16px" }}>
           FAQ
         </p>
-        <h1 style={{ fontSize: "42px", color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase", marginBottom: "24px" }}>
+        <h1 style={{ fontSize: "42px", color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase", marginBottom: "24px" }}>
           Συχνές Ερωτήσεις
         </h1>
         <p style={{ fontSize: "18px", color: "#a3a3a3", maxWidth: "600px", margin: "0 auto" }}>
@@ -91,7 +91,7 @@ const FAQ = () => {
                     fontWeight: 600,
                     color: "#f5f5f5",
                     textAlign: "left",
-                    fontFamily: "'Roboto Condensed', sans-serif",
+                    fontFamily: "'Noto Sans Display', sans-serif",
                   }}
                   className="hover:no-underline hover:text-primary [&[data-state=open]]:text-primary"
                 >

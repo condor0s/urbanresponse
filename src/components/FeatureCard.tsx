@@ -54,7 +54,7 @@ const FeatureCard = ({
           fontWeight: 700,
           color: "#f5f5f5",
           marginBottom: "16px",
-          fontFamily: "'Roboto Condensed', sans-serif",
+          fontFamily: "'Noto Sans Display', sans-serif",
           textTransform: "uppercase",
           letterSpacing: "1px",
         }}

@@ -77,7 +77,7 @@ const About = () => {
                 }}
               >
                 <div style={{ color: "#fe4e00", marginBottom: "20px", display: "flex", justifyContent: "center" }}>{item.icon}</div>
-                <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "12px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+                <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "12px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                   {item.title}
                 </h4>
                 <p style={{ fontSize: "14px", color: "#a3a3a3" }}>{item.desc}</p>
@@ -129,7 +129,7 @@ const About = () => {
             borderLeft: "4px solid #fe4e00",
           }}
         >
-          <h3 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "24px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+          <h3 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "24px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
             Η προσέγγισή μας
           </h3>
           <p style={{ fontSize: "18px", color: "#d4d4d4", lineHeight: 1.9, marginBottom: "20px" }}>

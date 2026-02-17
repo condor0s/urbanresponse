@@ -64,7 +64,7 @@ const Instructor = () => {
                   borderTop: "4px solid #fe4e00",
                 }}
               >
-                <h4 style={{ fontSize: "16px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+                <h4 style={{ fontSize: "16px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
                   Εξειδίκευση
                 </h4>
                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>

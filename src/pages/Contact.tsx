@@ -38,7 +38,7 @@ const Contact = () => {
         <p style={{ fontSize: "14px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "3px", color: "#fe4e00", marginBottom: "16px" }}>
           Επικοινωνία
         </p>
-        <h1 style={{ fontSize: "42px", color: "#f5f5f5", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase", marginBottom: "24px" }}>
+        <h1 style={{ fontSize: "42px", color: "#f5f5f5", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase", marginBottom: "24px" }}>
           Επικοινώνησε μαζί μας
         </h1>
         <p style={{ fontSize: "18px", color: "#a3a3a3", maxWidth: "600px", margin: "0 auto" }}>
@@ -50,7 +50,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
           {/* Contact Info */}
           <div>
-            <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+            <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
               Στοιχεία Επικοινωνίας
             </h2>
             
@@ -171,7 +171,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
+            <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
               Στείλε Μήνυμα
             </h2>
             
