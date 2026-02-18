@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { Eye, Brain, Shield, Move, CheckCircle, AlertTriangle, Users, Target } from "lucide-react";
+import { Eye, Brain, Shield, Move, CheckCircle, AlertTriangle, Users, Target, Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import Section from "@/components/Section";
 import FeatureCard from "@/components/FeatureCard";
+import { getLatestPosts } from "@/data/blogPosts";
 
 import heroImage from "@/assets/hero-urban-night.jpg";
 import awarenessImage from "@/assets/awareness-eyes.jpg";
@@ -264,6 +265,145 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Latest Blog Posts */}
+      {(() => {
+        const latestPosts = getLatestPosts(3);
+        const categoryColors: Record<string, string> = {
+          Επίγνωση: "#fe4e00",
+          Φιλοσοφία: "#3b82f6",
+          Τεχνικές: "#22c55e",
+          Εκπαίδευση: "#a855f7",
+        };
+        const formatDate = (dateStr: string) =>
+          new Date(dateStr).toLocaleDateString("el-GR", { day: "numeric", month: "long", year: "numeric" });
+
+        return (
+          <Section subtitle="Τελευταία" title="Άρθρα & Νέα" background="darker">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {latestPosts.map((post) => (
+                <article
+                  key={post.id}
+                  style={{
+                    backgroundColor: "#0a0a0a",
+                    borderRadius: "4px",
+                    overflow: "hidden",
+                    border: "1px solid #1f1f1f",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#fe4e00";
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "#1f1f1f";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
+                  <div style={{ height: "4px", backgroundColor: categoryColors[post.category] ?? "#fe4e00" }} />
+                  <div style={{ padding: "28px", flex: 1, display: "flex", flexDirection: "column" }}>
+                    <span
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        fontSize: "11px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "1px",
+                        color: categoryColors[post.category] ?? "#fe4e00",
+                        marginBottom: "14px",
+                      }}
+                    >
+                      <Tag size={11} />
+                      {post.category}
+                    </span>
+                    <h3
+                      style={{
+                        fontSize: "17px",
+                        fontWeight: 700,
+                        color: "#f5f5f5",
+                        fontFamily: "'Noto Sans Display', sans-serif",
+                        textTransform: "uppercase",
+                        lineHeight: 1.4,
+                        marginBottom: "12px",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      {post.title}
+                    </h3>
+                    <p style={{ fontSize: "14px", color: "#a3a3a3", lineHeight: 1.8, marginBottom: "20px", flex: 1 }}>
+                      {post.excerpt}
+                    </p>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        borderTop: "1px solid #1f1f1f",
+                        paddingTop: "16px",
+                      }}
+                    >
+                      <span style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "#737373" }}>
+                        <Calendar size={12} />
+                        {formatDate(post.date)}
+                      </span>
+                      <Link
+                        to={`/blog/${post.slug}`}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "6px",
+                          fontSize: "12px",
+                          fontWeight: 600,
+                          textTransform: "uppercase",
+                          letterSpacing: "1px",
+                          color: "#fe4e00",
+                          textDecoration: "none",
+                        }}
+                      >
+                        Διάβασε <ArrowRight size={12} />
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div style={{ textAlign: "center", marginTop: "48px" }}>
+              <Link
+                to="/blog"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "14px 32px",
+                  border: "1px solid #fe4e00",
+                  color: "#fe4e00",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  borderRadius: "4px",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#fe4e00";
+                  e.currentTarget.style.color = "#fff";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.color = "#fe4e00";
+                }}
+              >
+                Όλα τα άρθρα <ArrowRight size={14} />
+              </Link>
+            </div>
+          </Section>
+        );
+      })()}
 
       {/* Final CTA */}
       <Section background="dark">

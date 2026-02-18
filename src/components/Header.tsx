@@ -8,6 +8,7 @@ const navItems = [
   { path: "/about", label: "Σχετικά" },
   { path: "/instructor", label: "Ο Εκπαιδευτής" },
   { path: "/mission", label: "Αποστολή & Όραμα" },
+  { path: "/blog", label: "Blog" },
   { path: "/faq", label: "FAQ" },
   { path: "/contact", label: "Επικοινωνία" },
 ];
