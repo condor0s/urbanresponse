@@ -52,12 +52,29 @@ const Footer = () => {
             <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Noto Sans Display', sans-serif", textTransform: "uppercase" }}>
               Εκπαίδευση
             </h4>
-            <ul style={{ display: "flex", flexDirection: "column", gap: "12px", listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ fontSize: "14px", color: "#a3a3a3" }}>Situational Awareness</li>
-              <li style={{ fontSize: "14px", color: "#a3a3a3" }}>Decision Making</li>
-              <li style={{ fontSize: "14px", color: "#a3a3a3" }}>De-escalation</li>
-              <li style={{ fontSize: "14px", color: "#a3a3a3" }}>Physical Response</li>
-            </ul>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              {[
+                { path: "/training/situational-awareness", label: "Situational Awareness" },
+                { path: "/training/decision-making", label: "Decision Making" },
+                { path: "/training/de-escalation", label: "De-escalation" },
+                { path: "/training/physical-response", label: "Physical Response" },
+              ].map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  style={{
+                    fontSize: "14px",
+                    color: "#a3a3a3",
+                    textDecoration: "none",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = "#fe4e00"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#a3a3a3"}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           {/* Contact Info */}

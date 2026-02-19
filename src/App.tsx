@@ -12,6 +12,10 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import SituationalAwareness from "./pages/SituationalAwareness";
+import DecisionMaking from "./pages/DecisionMaking";
+import Deescalation from "./pages/Deescalation";
+import PhysicalResponse from "./pages/PhysicalResponse";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/training/situational-awareness" element={<SituationalAwareness />} />
+          <Route path="/training/decision-making" element={<DecisionMaking />} />
+          <Route path="/training/de-escalation" element={<Deescalation />} />
+          <Route path="/training/physical-response" element={<PhysicalResponse />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
