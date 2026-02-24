@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import Section from "@/components/Section";
-import { Target, Eye, CheckCircle, AlertTriangle, Shield, Brain, Move } from "lucide-react";
+import { Target, Eye, CheckCircle, AlertTriangle, Shield, Brain, Move, ShieldCheck } from "lucide-react";
 
 import threatImage from "@/assets/hero-threat.jpg";
 
@@ -182,6 +182,113 @@ const Mission = () => {
             </p>
             <p style={{ fontSize: "18px", color: "#fe4e00", fontWeight: 600 }}>
               Είναι εκπαίδευση για πραγματικούς ανθρώπους, σε πραγματικές πόλεις, σε πραγματικές συνθήκες.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Αρχές */}
+      <Section subtitle="ΑΡΧΕΣ" title="Οι Αρχές του Urban Response" background="dark">
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "50px" }}>
+            {[
+              {
+                num: "01",
+                title: "Η πρόληψη προηγείται της σύγκρουσης",
+                desc: "Η ασφάλεια ξεκινά πριν υπάρξει εμπλοκή. Εκπαιδευόμαστε να αναγνωρίζουμε έγκαιρα ενδείξεις κινδύνου.",
+              },
+              {
+                num: "02",
+                title: "Η επίγνωση είναι δεξιότητα",
+                desc: "Η παρατήρηση χώρου, αποστάσεων και συμπεριφορών καλλιεργείται και εξελίσσεται μέσα από δομημένη εκπαίδευση.",
+              },
+              {
+                num: "03",
+                title: "Η απόφαση υπερέχει της τεχνικής",
+                desc: "Σε πραγματικές συνθήκες, η σωστή απόφαση στον σωστό χρόνο είναι πιο σημαντική από την τελειότητα της κίνησης.",
+              },
+              {
+                num: "04",
+                title: "Η φυσική αντίδραση είναι έσχατη επιλογή",
+                desc: "Όταν η αποφυγή δεν είναι πλέον εφικτή, η αντίδραση είναι σύντομη, ελεγχόμενη και στοχεύει στη διακοπή της εμπλοκής.",
+              },
+              {
+                num: "05",
+                title: "Στόχος είναι η ασφαλής επιστροφή",
+                desc: "Η επιτυχία δεν μετριέται σε επικράτηση, αλλά στην ικανότητα να αποχωρείς με ασφάλεια.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  gap: "24px",
+                  padding: "32px",
+                  backgroundColor: "#141414",
+                  borderRadius: "4px",
+                  borderLeft: "4px solid #fe4e00",
+                  alignItems: "flex-start",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "32px",
+                    fontWeight: 800,
+                    color: "#fe4e00",
+                    fontFamily: "'Noto Sans Display', sans-serif",
+                    lineHeight: 1,
+                    flexShrink: 0,
+                    opacity: 0.6,
+                  }}
+                >
+                  {item.num}
+                </span>
+                <div>
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 700,
+                      color: "#f5f5f5",
+                      marginBottom: "8px",
+                      fontFamily: "'Noto Sans Display', sans-serif",
+                      textTransform: "uppercase",
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    {item.title}
+                  </h4>
+                  <p style={{ fontSize: "15px", color: "#a3a3a3", lineHeight: 1.8 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Closing statement */}
+          <div
+            style={{
+              padding: "40px",
+              backgroundColor: "#141414",
+              borderRadius: "8px",
+              textAlign: "center",
+              borderTop: "4px solid #fe4e00",
+            }}
+          >
+            <ShieldCheck size={36} style={{ color: "#fe4e00", margin: "0 auto 16px" }} />
+            <h4
+              style={{
+                fontSize: "20px",
+                color: "#f5f5f5",
+                fontFamily: "'Noto Sans Display', sans-serif",
+                textTransform: "uppercase",
+                marginBottom: "12px",
+              }}
+            >
+              Urban Response
+            </h4>
+            <p style={{ fontSize: "16px", color: "#a3a3a3", lineHeight: 1.8 }}>
+              Εκπαίδευση για καθαρή σκέψη, ελεγχόμενη δράση και ασφαλή επιστροφή.
             </p>
           </div>
         </div>
