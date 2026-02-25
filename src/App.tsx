@@ -16,6 +16,7 @@ import SituationalAwareness from "./pages/SituationalAwareness";
 import DecisionMaking from "./pages/DecisionMaking";
 import Deescalation from "./pages/Deescalation";
 import PhysicalResponse from "./pages/PhysicalResponse";
+import TrainingFramework from "./pages/TrainingFramework";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/training/decision-making" element={<DecisionMaking />} />
           <Route path="/training/de-escalation" element={<Deescalation />} />
           <Route path="/training/physical-response" element={<PhysicalResponse />} />
+          <Route path="/training-framework" element={<TrainingFramework />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
