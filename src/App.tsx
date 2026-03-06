@@ -17,6 +17,7 @@ import DecisionMaking from "./pages/DecisionMaking";
 import Deescalation from "./pages/Deescalation";
 import PhysicalResponse from "./pages/PhysicalResponse";
 import TrainingFramework from "./pages/TrainingFramework";
+import CertificateVerify from "./pages/CertificateVerify";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,8 @@ const App = () => (
           <Route path="/training/de-escalation" element={<Deescalation />} />
           <Route path="/training/physical-response" element={<PhysicalResponse />} />
           <Route path="/training-framework" element={<TrainingFramework />} />
+          <Route path="/verify/:token" element={<CertificateVerify />} />
+          <Route path="/verify" element={<CertificateVerify />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

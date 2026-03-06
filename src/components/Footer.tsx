@@ -27,6 +27,7 @@ const Footer = () => {
                 { path: "/mission", label: "Αποστολή & Όραμα" },
                 { path: "/blog", label: "Blog" },
                 { path: "/faq", label: "FAQ" },
+                { path: "/verify", label: "Verify" },
                 { path: "/contact", label: "Επικοινωνία" },
               ].map((item) => (
                 <Link
