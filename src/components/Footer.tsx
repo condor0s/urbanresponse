@@ -28,6 +28,7 @@ const Footer = () => {
                 { path: "/blog", label: "Blog" },
                 { path: "/faq", label: "FAQ" },
                 { path: "/verify", label: "Verify" },
+                { path: "/verify2", label: "Verify2" },
                 { path: "/contact", label: "Επικοινωνία" },
               ].map((item) => (
                 <Link
