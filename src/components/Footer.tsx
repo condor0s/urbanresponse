@@ -13,6 +13,27 @@ const Footer = () => {
             <p style={{ fontSize: "14px", color: "#a3a3a3", lineHeight: 1.8 }}>
               Σύγχρονο εκπαιδευτικό πλαίσιο αστικής ασφάλειας και προσωπικής προστασίας.
             </p>
+            <div style={{ display: "flex", gap: "16px", marginTop: "20px" }}>
+              {[
+                { href: "https://www.facebook.com/", icon: Facebook, label: "Facebook" },
+                { href: "https://www.instagram.com/", icon: Instagram, label: "Instagram" },
+                { href: "https://www.linkedin.com/", icon: Linkedin, label: "LinkedIn" },
+                { href: "https://www.youtube.com/", icon: Youtube, label: "YouTube" },
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  style={{ color: "#a3a3a3", transition: "color 0.3s ease" }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = "#fe4e00"}
+                  onMouseLeave={(e) => e.currentTarget.style.color = "#a3a3a3"}
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
