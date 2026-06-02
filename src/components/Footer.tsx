@@ -25,6 +25,7 @@ const Footer = () => {
                 { path: "/about", label: "Σχετικά" },
                 { path: "/instructor", label: "Ο Εκπαιδευτής" },
                 { path: "/mission", label: "Αποστολή & Όραμα" },
+                { path: "/training-tracks", label: "Εκπαιδευτικές Διαδρομές" },
                 { path: "/faq", label: "FAQ" },
                 { path: "/contact", label: "Επικοινωνία" },
               ].map((item) => (
