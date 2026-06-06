@@ -16,7 +16,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
-import heroBg from "@/assets/hero-urban-night.jpg";
+import heroBg from "@/assets/hero-training-tracks.jpg";
 
 interface Track {
   title: string;
