@@ -143,8 +143,10 @@ const approachPillars = ["Awareness", "Prevention", "Decision", "Response"];
 
 const TrackCard = ({ track }: { track: Track }) => (
   <article
-    className="flex flex-col h-full"
     style={{
+      display: "flex",
+      flexDirection: "column",
+      height: "100%",
       backgroundColor: "#141414",
       borderRadius: "4px",
       borderTop: "4px solid #fe4e00",
@@ -161,8 +163,10 @@ const TrackCard = ({ track }: { track: Track }) => (
     }}
   >
     <div
-      className="flex items-center justify-center"
       style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         width: "64px",
         height: "64px",
         backgroundColor: "#1f1f1f",
@@ -206,7 +210,16 @@ const TrackCard = ({ track }: { track: Track }) => (
       >
         Απευθύνεται σε:
       </h4>
-      <ul className="flex flex-wrap gap-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+      <ul
+        style={{
+          listStyle: "none",
+          padding: 0,
+          margin: 0,
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "8px",
+        }}
+      >
         {track.audience.map((a) => (
           <li
             key={a}
@@ -242,8 +255,14 @@ const TrackCard = ({ track }: { track: Track }) => (
         {track.topics.map((t) => (
           <li
             key={t}
-            className="flex items-start gap-2"
-            style={{ fontSize: "14px", color: "#d4d4d4", lineHeight: 1.6 }}
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "8px",
+              fontSize: "14px",
+              color: "#d4d4d4",
+              lineHeight: 1.6,
+            }}
           >
             <CheckCircle2 size={16} style={{ color: "#fe4e00", flexShrink: 0, marginTop: "3px" }} />
             <span>{t}</span>
@@ -253,8 +272,8 @@ const TrackCard = ({ track }: { track: Track }) => (
     </div>
 
     <p
-      className="mt-auto"
       style={{
+        marginTop: "auto",
         fontSize: "14px",
         color: "#a3a3a3",
         lineHeight: 1.7,
