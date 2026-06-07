@@ -307,28 +307,14 @@ const TrainingTracks = () => {
             του συστήματος και περιλαμβάνει:
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {coreModules.map((m) => (
               <div
                 key={m.label}
-                className="flex items-center gap-3"
-                style={{
-                  backgroundColor: "#0a0a0a",
-                  padding: "16px 20px",
-                  borderRadius: "4px",
-                  border: "1px solid #333333",
-                }}
+                className="flex items-center gap-3 bg-[#0a0a0a] border border-[#333333] rounded px-5 py-4"
               >
-                <span style={{ color: "#fe4e00" }}>{m.icon}</span>
-                <span
-                  style={{
-                    fontSize: "14px",
-                    fontWeight: 600,
-                    color: "#f5f5f5",
-                    textTransform: "uppercase",
-                    letterSpacing: "1px",
-                  }}
-                >
+                <span className="text-[#fe4e00]">{m.icon}</span>
+                <span className="text-sm font-semibold text-[#f5f5f5] uppercase tracking-wide">
                   {m.label}
                 </span>
               </div>
