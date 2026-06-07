@@ -359,7 +359,13 @@ const TrainingTracks = () => {
         subtitle="Specialized Pathways"
         title="Οι Εκπαιδευτικές Διαδρομές"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))",
+            gap: "32px",
+          }}
+        >
           {tracks.map((t) => (
             <TrackCard key={t.title} track={t} />
           ))}
