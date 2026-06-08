@@ -407,9 +407,18 @@ const TrainingTracks = () => {
             όταν οι συνθήκες το απαιτούν.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-5 mb-12">
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "20px",
+              marginBottom: "48px",
+            }}
+          >
             {approachPillars.map((p, i) => (
-              <div key={p} className="flex items-center gap-3 md:gap-5">
+              <div key={p} style={{ display: "flex", alignItems: "center", gap: "20px" }}>
                 <div
                   style={{
                     padding: "16px 28px",
