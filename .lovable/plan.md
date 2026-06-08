@@ -1,54 +1,30 @@
-# Νέα σελίδα: Specialized Training Pathways
+## Στόχος
+Το banner #1 να γεμίζει ολόκληρο τον καμβά **1122×1402** (αναλογία ~0.80, κάθετο), χωρίς θολά κενά αριστερά/δεξιά και χωρίς να κόβονται κείμενα ή logo.
 
-## Τίτλος στο Navigation Menu
-**"Εκπαιδευτικές Διαδρομές"** (URL: `/training-tracks`)
+## Τι θα κάνω
 
-Ταιριάζει με το υπόλοιπο menu που είναι στα ελληνικά (Αρχική, Σχετικά, Ο Εκπαιδευτής, Αποστολή & Όραμα, FAQ, Επικοινωνία) και αντικατοπτρίζει σωστά τον όρο "Specialized Training Pathways".
+1. **Νέα εικόνα-βάση στο σωστό aspect ratio**
+   - Παραγωγή φωτογραφικής σκηνής κατευθείαν σε αναλογία **4:5** (1024×1280) με το ίδιο concept: ένας hooded άντρας με την πλάτη στον θεατή, σε σκοτεινό αστικό δρομάκι με υγρή άσφαλτο και πορτοκαλί φωτισμό, τρεις απειλητικές hooded σιλουέτες απέναντι στο βάθος. Urban/noir, κινηματογραφικό, χωρίς κείμενο πάνω στην εικόνα.
+   - Η σύνθεση θα έχει σκόπιμο αρνητικό χώρο στο πάνω μέρος για να «κάτσει» η τυπογραφία χωρίς να σκεπάζει πρόσωπα/φιγούρες.
 
-## Δομή Σελίδας
+2. **Upscale & fit στα 1122×1402**
+   - Resize της βάσης ώστε να καλύπτει όλο τον καμβά 1122×1402 (cover, χωρίς padding/blur).
+   - Ελαφρύ vertical gradient overlay στο πάνω 35% για ευανάγνωστο τίτλο.
 
-Ίδιο look & feel με τις υπόλοιπες σελίδες: dark theme (#0a0a0a), accent #fe4e00, Roboto Condensed για τίτλους, χρήση των υπαρχόντων components (`Layout`, `HeroSection`, `Section`, `FeatureCard`).
+3. **Τυπογραφία (compositing με PIL)**
+   - Τίτλος σε 3 γραμμές πάνω-αριστερά: **«ΜΥΑΛΟ.» / «ΠΑΡΑΤΗΡΗΣΗ.» / «ΕΠΙΓΝΩΣΗ.»**
+   - Γραμματοσειρά heading στο στυλ του project (Noto Sans Display, bold/black, uppercase), λευκό #ffffff, με διακριτική σκιά για contrast.
+   - Padding ~70px από αριστερά/πάνω, line-height άνετο, χωρίς να κόβονται γράμματα.
 
-### 1. Hero Section
-- Background: urban/noir εικόνα (επαναχρησιμοποίηση `hero-urban-night.jpg` ή παρόμοιας)
-- Subtitle: "URBAN RESPONSE® SYSTEM"
-- Title: "ΕΞΕΙΔΙΚΕΥΜΕΝΕΣ ΕΚΠΑΙΔΕΥΤΙΚΕΣ ΔΙΑΔΡΟΜΕΣ"
-- Description: το εισαγωγικό κείμενο ("Το Urban Response® δεν αποτελεί απλώς ένα πρόγραμμα...")
+4. **Logo κάτω δεξιά**
+   - Χρήση του `src/assets/logo.png` με διάφανο padding (όπως στα v2) ώστε να μην κόβονται «URBAN / RESPONSE».
+   - Πλάτος ~17% του καμβά, περιθώρια ~78px.
 
-### 2. Intro Section
-Σύντομη εισαγωγή με το δεύτερο εισαγωγικό κείμενο για τις εξειδικευμένες διαδρομές.
+5. **Έξοδος & QA**
+   - Αποθήκευση ως `/mnt/documents/urban-response-instagram-1-1122x1402_v4.png` (διατηρώ τα προηγούμενα versions ως history).
+   - Έλεγχος pixel διαστάσεων (1122×1402) και zoom στις 4 γωνίες + κεντρικό κάδρο για να επιβεβαιωθεί: γεμάτο φόντο, καθαρή τυπογραφία, ακέραιο logo, καμία θόλωση στις πλευρές.
+   - Παράδοση με `presentation-artifact`.
 
-### 3. Core Program Section (highlighted)
-Ξεχωριστή ενότητα με έντονο accent border για το **Urban Response® Core Program** ως θεμελιώδες πρόγραμμα. Λίστα με τα 5 modules (Situational Awareness, Prevention & Avoidance, Threat Assessment, Urban Control, Leadership Under Pressure) + περιγραφή.
-
-### 4. Specialized Tracks Grid
-Grid (2 στήλες desktop, 1 στήλη mobile) με 5 κάρτες-tracks. Κάθε κάρτα περιλαμβάνει:
-- Εικονίδιο (lucide-react: School, Users, Briefcase, Building2, Shield)
-- Τίτλος track
-- Σύντομη περιγραφή
-- "Απευθύνεται σε:" λίστα
-- "Αντικείμενα εκπαίδευσης:" λίστα
-- Closing statement
-
-Tracks:
-1. **School Safety & Education Track** — School icon
-2. **Family Protection Track** — Users icon
-3. **Corporate Safety Track** — Briefcase icon
-4. **Community Safety Track** — Building2 icon
-5. **Women's Personal Safety Track** — Shield icon
-
-### 6. The Urban Response® Approach
-Closing section με τη φιλοσοφία. 4 pillars σε οριζόντια διάταξη: **Awareness → Prevention → Decision → Response** (με βέλη/separators σε accent χρώμα). Από κάτω το statement "Urban Response® – Prepared for Reality." σαν τονισμένο tagline.
-
-### 7. CTA Section
-Κουμπί προς `/contact` με κείμενο "Ενδιαφέρεστε για ένα πρόγραμμα;" → "Επικοινωνήστε μαζί μας".
-
-## Τεχνικά (technical notes)
-
-- Νέο αρχείο: `src/pages/TrainingTracks.tsx`
-- Update `src/App.tsx`: import + route `<Route path="/training-tracks" element={<TrainingTracks />} />` πριν το catch-all
-- Update `src/components/Header.tsx`: προσθήκη `{ path: "/training-tracks", label: "Εκπαιδευτικές Διαδρομές" }` στο `navItems` (μετά το "Αποστολή & Όραμα")
-- Update `src/components/Footer.tsx`: αντίστοιχο link αν υπάρχει sitemap
-- Χρήση υπαρχόντων components για συνέπεια· νέο μικρό `TrackCard` component για τις κάρτες των tracks (με λίστες "Απευθύνεται σε" / "Αντικείμενα")
-- Όλα τα κείμενα verbatim όπως δόθηκαν
-- Mobile-responsive με τα ίδια breakpoints
+## Εκτός σκοπού
+- Δεν αλλάζω το concept της εικόνας ούτε τους τίτλους.
+- Δεν πειράζω το banner #2 σε αυτό το βήμα (θα ακολουθήσει με τον ίδιο τρόπο μόλις εγκρίνεις το #1).
