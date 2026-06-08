@@ -1,20 +1,17 @@
-## Πρόβλημα
-Στο `og-training-tracks.jpg` τα ελληνικά («ΕΚΠΑΙΔΕΥΤΙΚΕΣ», «ΔΙΑΔΡΟΜΕΣ», υπότιτλος) εμφανίζονται ως κουτάκια. Μόνο το λατινικό "URBAN RESPONSE" και το "urbanresponse.lovable.app" βγήκαν σωστά.
+## Στόχος
+Προσθήκη του `src/assets/logo.png` στο OG banner `public/og-training-tracks.jpg` (1200×630), χωρίς να αλλάξει τίποτα άλλο.
 
-Αιτία: χρησιμοποίησα DejaVu μέσω PIL χωρίς σωστό Unicode rendering για τους ελληνικούς χαρακτήρες.
+## Τοποθέτηση
+- **Πάνω-αριστερά**, στη θέση του "URBAN RESPONSE" kicker.
+- Αντικαθιστά τον πορτοκαλί κατακόρυφο accent bar + το κείμενο "URBAN RESPONSE" (γιατί το logo τα περιέχει ήδη).
+- Ύψος logo ~70px, διατήρηση aspect ratio, padding 60px από αριστερά / 100px από πάνω.
 
-## Τι θα κάνω
-1. Κατεβάζω **Noto Sans** (regular + bold) — υποστηρίζει πλήρως ελληνικά και είναι ήδη η οικογένεια του project (Noto Sans Display headings, Inter body).
-2. Ξαναφτιάχνω το `public/og-training-tracks.jpg` (1200×630) με **ακριβώς το ίδιο layout**:
-   - ίδιο hero image (`hero-training-tracks.jpg`) με cover crop
-   - ίδιο gradient overlay (σκούρο αριστερά → πιο ανοιχτό δεξιά)
-   - πορτοκαλί accent bar + "URBAN RESPONSE" kicker
-   - τίτλος δύο γραμμών: **ΕΚΠΑΙΔΕΥΤΙΚΕΣ / ΔΙΑΔΡΟΜΕΣ** (τώρα αναγνώσιμα)
-   - υπότιτλος: «Πέντε επίπεδα. Από την επίγνωση έως την απόκριση.»
-   - κάτω πορτοκαλί γραμμή + `urbanresponse.lovable.app`
-3. Επαληθεύω ότι όλα τα γράμματα φαίνονται σωστά (QA με zoom στις τρεις γραμμές κειμένου) **πριν** σου το παραδώσω.
-4. Τα meta tags στο `index.html` δεν χρειάζονται αλλαγή — δείχνουν ήδη στο ίδιο path (`/og-training-tracks.jpg`).
+## Τι μένει ίδιο
+- Background (hero image + gradient overlay)
+- Τίτλος «ΕΚΠΑΙΔΕΥΤΙΚΕΣ / ΔΙΑΔΡΟΜΕΣ»
+- Υπότιτλος
+- Κάτω πορτοκαλί γραμμή + `urbanresponse.lovable.app`
+- Διαστάσεις 1200×630, meta tags στο `index.html`
 
-## Τι ΔΕΝ θα αλλάξει
-- Διαστάσεις (1200×630), background image, χρώματα, layout, meta tags.
-- Μόνο το font swap + re-render του κειμένου.
+## QA
+Zoom στην πάνω-αριστερή γωνία για να επιβεβαιωθεί ότι το logo φαίνεται καθαρά πάνω στο σκούρο gradient.
