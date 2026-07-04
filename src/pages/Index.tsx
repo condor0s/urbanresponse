@@ -47,7 +47,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div style={{ position: "relative" }}>
+          <div style={{ flex: "1 1 280px", minWidth: "min(100%, 280px)", position: "relative" }}>
             <img 
               src={awarenessImage} 
               alt="Situational Awareness" 
