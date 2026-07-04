@@ -221,12 +221,137 @@ const BulletList = ({ items, color = ORANGE }: { items: string[]; color?: string
 const Constitution = () => {
   return (
     <Layout>
-      <HeroSection
-        subtitle="Καταστατικό Λειτουργίας · Έκδοση 1.0"
-        title="Το Καταστατικό του Urban Response"
-        backgroundImage={heroImage}
-        height="55vh"
-      />
+      <section
+        style={{
+          position: "relative",
+          minHeight: "55vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          padding: "80px 24px",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse at center, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.9) 70%, rgba(10,10,10,0.97) 100%)",
+          }}
+        />
+        {/* Decorative corner brackets */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: "32px",
+            border: `1px solid ${ORANGE}33`,
+            pointerEvents: "none",
+          }}
+        />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            textAlign: "center",
+            maxWidth: "900px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "28px",
+          }}
+        >
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                width: "260px",
+                height: "260px",
+                borderRadius: "50%",
+                background: `radial-gradient(circle, ${ORANGE}33 0%, transparent 70%)`,
+                filter: "blur(20px)",
+              }}
+            />
+            <img
+              src={constitutionEmblem}
+              alt="Urban Response Constitution Emblem"
+              width={200}
+              height={200}
+              style={{
+                position: "relative",
+                width: "clamp(140px, 22vw, 200px)",
+                height: "auto",
+                filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.6))",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              color: ORANGE,
+            }}
+          >
+            <span style={{ height: "1px", width: "40px", background: ORANGE }} />
+            <p
+              style={{
+                fontSize: "12px",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "4px",
+                margin: 0,
+              }}
+            >
+              Καταστατικό Λειτουργίας · Έκδοση 1.0
+            </p>
+            <span style={{ height: "1px", width: "40px", background: ORANGE }} />
+          </div>
+          <h1
+            style={{
+              fontSize: "clamp(32px, 6vw, 56px)",
+              fontWeight: 700,
+              color: "#ffffff",
+              fontFamily: "'Roboto Condensed', sans-serif",
+              textTransform: "uppercase",
+              letterSpacing: "2px",
+              lineHeight: 1.1,
+              margin: 0,
+            }}
+          >
+            Το Καταστατικό του Urban Response
+          </h1>
+          <p
+            style={{
+              fontSize: "13px",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              color: MUTED,
+              margin: 0,
+            }}
+          >
+            Constitution & Operating Standards
+          </p>
+        </div>
+      </section>
 
       {/* Preamble */}
       <Section background="darker">
