@@ -384,11 +384,13 @@ const Constitution = () => {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "20px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
             {principles.map((p, i) => (
               <div
                 key={i}
                 style={{
+                  flex: "1 1 180px",
+                  minWidth: "min(100%, 180px)",
                   padding: "32px 24px",
                   backgroundColor: CARD,
                   borderRadius: "6px",
@@ -435,11 +437,13 @@ const Constitution = () => {
             <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "28px" }}>
               Οι βασικές αξίες του Urban Response είναι:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "12px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
               {values.map((v, i) => (
                 <div
                   key={i}
                   style={{
+                    flex: "1 1 140px",
+                    minWidth: "min(calc(50% - 6px), 140px)",
                     padding: "18px 16px",
                     backgroundColor: "#0a0a0a",
                     border: "1px solid #262626",
@@ -516,11 +520,13 @@ const Constitution = () => {
               Το Urban Response δύναται να αποτελείται από διαδοχικά επίπεδα εκπαίδευσης.
               Ενδεικτικά:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
               {levels.map((lvl, i) => (
                 <div
                   key={i}
                   style={{
+                    flex: "1 1 200px",
+                    minWidth: "min(100%, 200px)",
                     padding: "24px 20px",
                     backgroundColor: CARD_SOFT,
                     borderRadius: "4px",
