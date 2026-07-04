@@ -24,8 +24,8 @@ const Index = () => {
 
       {/* What is Urban Response */}
       <Section subtitle="Τι είναι" title="Urban Response" background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "60px", alignItems: "center" }}>
-          <div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "60px", alignItems: "center" }}>
+          <div style={{ flex: "1 1 280px", minWidth: "min(100%, 280px)" }}>
             <p style={{ fontSize: "18px", color: "#d4d4d4", lineHeight: 1.8, marginBottom: "24px" }}>
               Το Urban Response είναι ένα ανεξάρτητο εκπαιδευτικό framework αστικής ασφάλειας και προσωπικής προστασίας.
             </p>
@@ -84,32 +84,42 @@ const Index = () => {
 
       {/* Core Pillars */}
       <Section subtitle="Οι βασικοί άξονες" title="Εκπαίδευσης" background="gradient">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "24px" }}>
-          <FeatureCard
-            icon={<Eye size={28} />}
-            title="Situational Awareness"
-            description="Αναγνώριση κινδύνου, περιβάλλοντος και αλλαγών συμπεριφοράς."
-          />
-          <FeatureCard
-            icon={<Brain size={28} />}
-            title="Decision Making Under Pressure"
-            description="Πότε φεύγω, πότε μιλάω, πότε αντιδρώ."
-          />
-          <FeatureCard
-            icon={<Shield size={28} />}
-            title="Avoidance & De-escalation"
-            description="Μείωση έντασης πριν φτάσει στο σημείο σύγκρουσης."
-          />
-          <FeatureCard
-            icon={<Move size={28} />}
-            title="Physical Response"
-            description="Απεμπλοκή, έλεγχος χώρου και ασφαλής διαφυγή - όταν δεν υπάρχει άλλη επιλογή."
-          />
-          <FeatureCard
-            icon={<CheckCircle size={28} />}
-            title="Post-Incident Behaviour"
-            description="Τι κάνεις μετά: απομάκρυνση, έλεγχος, ψυχραιμία."
-          />
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
+          <div style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)" }}>
+            <FeatureCard
+              icon={<Eye size={28} />}
+              title="Situational Awareness"
+              description="Αναγνώριση κινδύνου, περιβάλλοντος και αλλαγών συμπεριφοράς."
+            />
+          </div>
+          <div style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)" }}>
+            <FeatureCard
+              icon={<Brain size={28} />}
+              title="Decision Making Under Pressure"
+              description="Πότε φεύγω, πότε μιλάω, πότε αντιδρώ."
+            />
+          </div>
+          <div style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)" }}>
+            <FeatureCard
+              icon={<Shield size={28} />}
+              title="Avoidance & De-escalation"
+              description="Μείωση έντασης πριν φτάσει στο σημείο σύγκρουσης."
+            />
+          </div>
+          <div style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)" }}>
+            <FeatureCard
+              icon={<Move size={28} />}
+              title="Physical Response"
+              description="Απεμπλοκή, έλεγχος χώρου και ασφαλής διαφυγή - όταν δεν υπάρχει άλλη επιλογή."
+            />
+          </div>
+          <div style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)" }}>
+            <FeatureCard
+              icon={<CheckCircle size={28} />}
+              title="Post-Incident Behaviour"
+              description="Τι κάνεις μετά: απομάκρυνση, έλεγχος, ψυχραιμία."
+            />
+          </div>
         </div>
       </Section>
 
