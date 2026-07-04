@@ -32,7 +32,7 @@ const About = () => {
 
       {/* Philosophy */}
       <Section subtitle="Η φιλοσοφία μας" background="dark">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "60px", alignItems: "center" }}>
           <div>
             <p style={{ fontSize: "17px", color: "#d4d4d4", lineHeight: 1.9, marginBottom: "24px" }}>
               Η φιλοσοφία του Urban Response βασίζεται στην παραδοχή ότι η ασφάλεια στην πόλη δεν ξεκινά από τη φυσική σύγκρουση, αλλά από την ικανότητα να αντιλαμβάνεσαι έγκαιρα τον κίνδυνο και να αποφεύγεις καταστάσεις που μπορούν να κλιμακωθούν.
@@ -61,7 +61,7 @@ const About = () => {
             Η εκπαίδευση στο Urban Response είναι ρεαλιστική, δομημένη και προσαρμοσμένη στις απαιτήσεις της καθημερινής ζωής. Περιλαμβάνει θεωρία, πρακτικά drills και σενάρια που προσομοιώνουν πραγματικές αστικές συνθήκες, χωρίς υπερβολές και χωρίς επιθετική προσέγγιση.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
             {[
               { icon: <BookOpen size={32} />, title: "Θεωρία", desc: "Κατανόηση αρχών και στρατηγικών" },
               { icon: <Target size={32} />, title: "Drills", desc: "Πρακτική εξάσκηση σε ελεγχόμενο περιβάλλον" },
