@@ -21,9 +21,9 @@ const Instructor = () => {
       {/* Bio */}
       <Section background="darker">
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[60px] items-start">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "60px", alignItems: "start" }}>
             {/* Main Content */}
-            <div className="md:col-span-2">
+            <div>
               <p style={{ fontSize: "18px", color: "#d4d4d4", lineHeight: 1.9, marginBottom: "24px" }}>
                 Ο Σταύρος Μπαρούτας είναι εκπαιδευτής αστικής ασφάλειας και προσωπικής προστασίας με πολυετή εμπειρία στη φυσική αυτοπροστασία και στη διαχείριση καταστάσεων κινδύνου στο αστικό περιβάλλον.
               </p>

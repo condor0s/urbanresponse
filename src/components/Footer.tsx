@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid #333333" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "60px 24px 30px" }}>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "40px" }}>
           {/* Logo & Description */}
           <div>
             <img src={logo} alt="Urban Response" style={{ height: "80px", marginBottom: "20px" }} />

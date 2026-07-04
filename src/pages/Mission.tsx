@@ -18,7 +18,7 @@ const Mission = () => {
 
       {/* Mission & Vision */}
       <Section background="darker">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
           {/* Mission */}
           <div 
             style={{
@@ -104,7 +104,7 @@ const Mission = () => {
             Το Urban Response εκπαιδεύει μέσα από ένα ολοκληρωμένο πλαίσιο αστικής ασφάλειας που βασίζεται σε:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-[50px]">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px", marginBottom: "50px" }}>
             {[
               { icon: <Eye size={24} />, text: "Επίγνωση περιβάλλοντος (Situational Awareness)" },
               { icon: <Shield size={24} />, text: "Πρόληψη και αποφυγή ρίσκου" },

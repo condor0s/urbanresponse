@@ -384,7 +384,7 @@ const Constitution = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "20px" }}>
             {principles.map((p, i) => (
               <div
                 key={i}
@@ -435,7 +435,7 @@ const Constitution = () => {
             <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "28px" }}>
               Οι βασικές αξίες του Urban Response είναι:
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "12px" }}>
               {values.map((v, i) => (
                 <div
                   key={i}
@@ -516,7 +516,7 @@ const Constitution = () => {
               Το Urban Response δύναται να αποτελείται από διαδοχικά επίπεδα εκπαίδευσης.
               Ενδεικτικά:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
               {levels.map((lvl, i) => (
                 <div
                   key={i}
@@ -561,7 +561,7 @@ const Constitution = () => {
       {/* Article 8 & 9 – Instructors */}
       <Section background="dark">
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
             <ArticleCard>
               <ArticleHeader num={8} title="Εκπαιδευτές" icon={<UserCheck size={26} />} />
               <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "20px" }}>
@@ -650,7 +650,7 @@ const Constitution = () => {
               Σε περίπτωση σοβαρής παραβίασης των αρχών ή των κανόνων του Urban Response δύναται
               να επιβληθούν:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
               {disciplinary.map((d) => (
                 <div
                   key={d.level}
@@ -696,7 +696,7 @@ const Constitution = () => {
       {/* Article 14 & 15 – Revision */}
       <Section background="darker">
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
             <ArticleCard>
               <ArticleHeader num={14} title="Αναθεώρηση Προτύπων" icon={<RefreshCw size={26} />} />
               <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "20px" }}>
