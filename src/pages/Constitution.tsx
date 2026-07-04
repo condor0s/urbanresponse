@@ -173,13 +173,14 @@ const ArticleHeader = ({
   </div>
 );
 
-const ArticleCard = ({ children }: { children: React.ReactNode }) => (
+const ArticleCard = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <article
     style={{
       padding: "44px",
       backgroundColor: CARD,
       borderRadius: "6px",
       borderLeft: `3px solid ${ORANGE}`,
+      ...style,
     }}
   >
     {children}
@@ -384,11 +385,13 @@ const Constitution = () => {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "20px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
             {principles.map((p, i) => (
               <div
                 key={i}
                 style={{
+                  flex: "1 1 180px",
+                  minWidth: "min(100%, 180px)",
                   padding: "32px 24px",
                   backgroundColor: CARD,
                   borderRadius: "6px",
@@ -435,11 +438,13 @@ const Constitution = () => {
             <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "28px" }}>
               Οι βασικές αξίες του Urban Response είναι:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "12px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
               {values.map((v, i) => (
                 <div
                   key={i}
                   style={{
+                    flex: "1 1 140px",
+                    minWidth: "min(calc(50% - 6px), 140px)",
                     padding: "18px 16px",
                     backgroundColor: "#0a0a0a",
                     border: "1px solid #262626",
@@ -516,11 +521,13 @@ const Constitution = () => {
               Το Urban Response δύναται να αποτελείται από διαδοχικά επίπεδα εκπαίδευσης.
               Ενδεικτικά:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
               {levels.map((lvl, i) => (
                 <div
                   key={i}
                   style={{
+                    flex: "1 1 200px",
+                    minWidth: "min(100%, 200px)",
                     padding: "24px 20px",
                     backgroundColor: CARD_SOFT,
                     borderRadius: "4px",
@@ -561,15 +568,15 @@ const Constitution = () => {
       {/* Article 8 & 9 – Instructors */}
       <Section background="dark">
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
-            <ArticleCard>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
+            <ArticleCard style={{ flex: "1 1 320px", minWidth: "min(100%, 320px)" }}>
               <ArticleHeader num={8} title="Εκπαιδευτές" icon={<UserCheck size={26} />} />
               <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "20px" }}>
                 Οι εκπαιδευτές του Urban Response οφείλουν:
               </p>
               <BulletList items={instructorDuties} />
             </ArticleCard>
-            <ArticleCard>
+            <ArticleCard style={{ flex: "1 1 320px", minWidth: "min(100%, 320px)" }}>
               <ArticleHeader num={9} title="Υποχρεώσεις Εκπαιδευτών" icon={<ShieldCheck size={26} />} />
               <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "20px" }}>
                 Οι πιστοποιημένοι εκπαιδευτές:
@@ -650,11 +657,13 @@ const Constitution = () => {
               Σε περίπτωση σοβαρής παραβίασης των αρχών ή των κανόνων του Urban Response δύναται
               να επιβληθούν:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
               {disciplinary.map((d) => (
                 <div
                   key={d.level}
                   style={{
+                    flex: "1 1 200px",
+                    minWidth: "min(100%, 200px)",
                     padding: "24px 20px",
                     backgroundColor: CARD_SOFT,
                     borderRadius: "4px",
@@ -696,8 +705,8 @@ const Constitution = () => {
       {/* Article 14 & 15 – Revision */}
       <Section background="darker">
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
-            <ArticleCard>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
+            <ArticleCard style={{ flex: "1 1 320px", minWidth: "min(100%, 320px)" }}>
               <ArticleHeader num={14} title="Αναθεώρηση Προτύπων" icon={<RefreshCw size={26} />} />
               <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "20px" }}>
                 Το Urban Response διατηρεί το δικαίωμα αναθεώρησης:
@@ -707,7 +716,7 @@ const Constitution = () => {
                 …ώστε να ανταποκρίνονται στις σύγχρονες εκπαιδευτικές και επιχειρησιακές απαιτήσεις.
               </p>
             </ArticleCard>
-            <ArticleCard>
+            <ArticleCard style={{ flex: "1 1 320px", minWidth: "min(100%, 320px)" }}>
               <ArticleHeader num={15} title="Τροποποίηση Καταστατικού" icon={<FileEdit size={26} />} />
               <p style={{ fontSize: "16px", color: TEXT, lineHeight: 1.9, marginBottom: "16px" }}>
                 Το παρόν Καταστατικό Λειτουργίας δύναται να τροποποιείται από τη Διοίκηση του

@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer style={{ backgroundColor: "#0a0a0a", borderTop: "1px solid #333333" }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "60px 24px 30px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "40px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "40px" }}>
           {/* Logo & Description */}
-          <div>
+          <div style={{ flex: "1 1 200px", minWidth: "min(100%, 200px)" }}>
             <img src={logo} alt="Urban Response" style={{ height: "80px", marginBottom: "20px" }} />
             <p style={{ fontSize: "14px", color: "#a3a3a3", lineHeight: 1.8 }}>
               Σύγχρονο εκπαιδευτικό πλαίσιο αστικής ασφάλειας και προσωπικής προστασίας.
@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div style={{ flex: "1 1 200px", minWidth: "min(100%, 200px)" }}>
             <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
               Σελίδες
             </h4>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Training */}
-          <div>
+          <div style={{ flex: "1 1 200px", minWidth: "min(100%, 200px)" }}>
             <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
               Εκπαίδευση
             </h4>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div style={{ flex: "1 1 200px", minWidth: "min(100%, 200px)" }}>
             <h4 style={{ fontSize: "18px", color: "#f5f5f5", marginBottom: "20px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
               Επικοινωνία
             </h4>

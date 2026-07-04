@@ -21,9 +21,9 @@ const Instructor = () => {
       {/* Bio */}
       <Section background="darker">
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "60px", alignItems: "start" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "60px", alignItems: "flex-start" }}>
             {/* Main Content */}
-            <div>
+            <div style={{ flex: "2 1 320px", minWidth: "min(100%, 320px)" }}>
               <p style={{ fontSize: "18px", color: "#d4d4d4", lineHeight: 1.9, marginBottom: "24px" }}>
                 Ο Σταύρος Μπαρούτας είναι εκπαιδευτής αστικής ασφάλειας και προσωπικής προστασίας με πολυετή εμπειρία στη φυσική αυτοπροστασία και στη διαχείριση καταστάσεων κινδύνου στο αστικό περιβάλλον.
               </p>
@@ -39,7 +39,7 @@ const Instructor = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="flex flex-col gap-6">
+            <div style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)", display: "flex", flexDirection: "column", gap: "24px" }}>
               {/* Instructor Photo */}
               <div 
                 style={{

@@ -18,10 +18,12 @@ const Mission = () => {
 
       {/* Mission & Vision */}
       <Section background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "40px" }}>
           {/* Mission */}
           <div 
             style={{
+              flex: "1 1 300px",
+              minWidth: "min(100%, 300px)",
               padding: "50px",
               backgroundColor: "#141414",
               borderRadius: "4px",
@@ -42,6 +44,8 @@ const Mission = () => {
           {/* Vision */}
           <div 
             style={{
+              flex: "1 1 300px",
+              minWidth: "min(100%, 300px)",
               padding: "50px",
               backgroundColor: "#141414",
               borderRadius: "4px",
@@ -104,7 +108,7 @@ const Mission = () => {
             Το Urban Response εκπαιδεύει μέσα από ένα ολοκληρωμένο πλαίσιο αστικής ασφάλειας που βασίζεται σε:
           </p>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "20px", marginBottom: "50px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", marginBottom: "50px" }}>
             {[
               { icon: <Eye size={24} />, text: "Επίγνωση περιβάλλοντος (Situational Awareness)" },
               { icon: <Shield size={24} />, text: "Πρόληψη και αποφυγή ρίσκου" },
@@ -112,7 +116,7 @@ const Mission = () => {
               { icon: <Target size={24} />, text: "Διαχείριση στρες και φόβου" },
               { icon: <Move size={24} />, text: "Απλή, ρεαλιστική φυσική αντίδραση" },
             ].map((item, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "16px", padding: "24px", backgroundColor: "#1a1a1a", borderRadius: "4px" }}>
+              <div key={i} style={{ flex: "1 1 260px", minWidth: "min(100%, 260px)", display: "flex", alignItems: "flex-start", gap: "16px", padding: "24px", backgroundColor: "#1a1a1a", borderRadius: "4px" }}>
                 <span style={{ color: "#fe4e00", flexShrink: 0, marginTop: "2px" }}>{item.icon}</span>
                 <span style={{ fontSize: "15px", color: "#d4d4d4" }}>{item.text}</span>
               </div>

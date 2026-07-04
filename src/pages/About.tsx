@@ -32,8 +32,8 @@ const About = () => {
 
       {/* Philosophy */}
       <Section subtitle="Η φιλοσοφία μας" background="dark">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "60px", alignItems: "center" }}>
-          <div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "60px", alignItems: "center" }}>
+          <div style={{ flex: "1 1 280px", minWidth: "min(100%, 280px)" }}>
             <p style={{ fontSize: "17px", color: "#d4d4d4", lineHeight: 1.9, marginBottom: "24px" }}>
               Η φιλοσοφία του Urban Response βασίζεται στην παραδοχή ότι η ασφάλεια στην πόλη δεν ξεκινά από τη φυσική σύγκρουση, αλλά από την ικανότητα να αντιλαμβάνεσαι έγκαιρα τον κίνδυνο και να αποφεύγεις καταστάσεις που μπορούν να κλιμακωθούν.
             </p>
@@ -44,7 +44,7 @@ const About = () => {
               Όταν η αποφυγή δεν είναι πλέον εφικτή, το Urban Response προετοιμάζει τον εκπαιδευόμενο να αντιδράσει με ασφάλεια και υπευθυνότητα, με στόχο τη διακοπή της εμπλοκής και την άμεση διαφυγή.
             </p>
           </div>
-          <div>
+          <div style={{ flex: "1 1 280px", minWidth: "min(100%, 280px)" }}>
             <img 
               src={trainingImage} 
               alt="Φιλοσοφία Urban Response" 
@@ -61,7 +61,7 @@ const About = () => {
             Η εκπαίδευση στο Urban Response είναι ρεαλιστική, δομημένη και προσαρμοσμένη στις απαιτήσεις της καθημερινής ζωής. Περιλαμβάνει θεωρία, πρακτικά drills και σενάρια που προσομοιώνουν πραγματικές αστικές συνθήκες, χωρίς υπερβολές και χωρίς επιθετική προσέγγιση.
           </p>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
             {[
               { icon: <BookOpen size={32} />, title: "Θεωρία", desc: "Κατανόηση αρχών και στρατηγικών" },
               { icon: <Target size={32} />, title: "Drills", desc: "Πρακτική εξάσκηση σε ελεγχόμενο περιβάλλον" },
@@ -70,6 +70,8 @@ const About = () => {
               <div 
                 key={i}
                 style={{
+                  flex: "1 1 220px",
+                  minWidth: "min(100%, 220px)",
                   padding: "40px 24px",
                   backgroundColor: "#141414",
                   borderRadius: "4px",
