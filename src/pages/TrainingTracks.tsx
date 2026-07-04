@@ -382,13 +382,15 @@ const TrainingTracks = () => {
       >
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))",
+            display: "flex",
+            flexWrap: "wrap",
             gap: "32px",
           }}
         >
           {tracks.map((t) => (
-            <TrackCard key={t.title} track={t} />
+            <div key={t.title} style={{ flex: "1 1 420px", minWidth: "min(100%, 420px)" }}>
+              <TrackCard track={t} />
+            </div>
           ))}
         </div>
       </Section>
