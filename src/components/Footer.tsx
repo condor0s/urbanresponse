@@ -27,7 +27,9 @@ const Footer = () => {
                 { path: "/mission", label: "Αποστολή & Όραμα" },
                 { path: "/training-tracks", label: "Εκπαιδευτικές Διαδρομές" },
                 { path: "/faq", label: "FAQ" },
+                { path: "/constitution", label: "Καταστατικό" },
                 { path: "/contact", label: "Επικοινωνία" },
+
               ].map((item) => (
                 <Link
                   key={item.path}
