@@ -18,7 +18,7 @@ import {
   FileEdit,
   Flag,
 } from "lucide-react";
-import heroImage from "@/assets/hero-urban-night.jpg";
+import heroImage from "@/assets/constitution-hero-bg.jpg";
 import constitutionEmblem from "@/assets/constitution-emblem.png";
 
 const ORANGE = "#fe4e00";
