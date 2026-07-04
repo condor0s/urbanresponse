@@ -10,7 +10,9 @@ import Mission from "./pages/Mission";
 import TrainingTracks from "./pages/TrainingTracks";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import Constitution from "./pages/Constitution";
 import NotFound from "./pages/NotFound";
+
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/training-tracks" element={<TrainingTracks />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/constitution" element={<Constitution />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
