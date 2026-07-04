@@ -47,9 +47,9 @@ const Contact = () => {
       </section>
 
       <Section background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "60px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "60px" }}>
           {/* Contact Info */}
-          <div>
+          <div style={{ flex: "1 1 300px", minWidth: "min(100%, 300px)" }}>
             <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
               Στοιχεία Επικοινωνίας
             </h2>
@@ -170,7 +170,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div style={{ flex: "1 1 300px", minWidth: "min(100%, 300px)" }}>
             <h2 style={{ fontSize: "28px", color: "#f5f5f5", marginBottom: "32px", fontFamily: "'Roboto Condensed', sans-serif", textTransform: "uppercase" }}>
               Στείλε Μήνυμα
             </h2>
