@@ -328,8 +328,8 @@ const TrainingTracks = () => {
 
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              display: "flex",
+              flexWrap: "wrap",
               gap: "16px",
               marginBottom: "32px",
             }}
@@ -338,6 +338,8 @@ const TrainingTracks = () => {
               <div
                 key={m.label}
                 style={{
+                  flex: "1 1 260px",
+                  minWidth: "min(100%, 260px)",
                   display: "flex",
                   alignItems: "center",
                   gap: "12px",
