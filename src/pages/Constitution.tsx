@@ -443,8 +443,9 @@ const Constitution = () => {
                 <div
                   key={i}
                   style={{
-                    flex: "1 1 140px",
-                    minWidth: "min(calc(50% - 6px), 140px)",
+                    flex: "1 1 calc(25% - 9px)",
+                    minWidth: "min(100%, calc(25% - 9px))",
+                    maxWidth: "calc(25% - 9px)",
                     padding: "18px 16px",
                     backgroundColor: "#0a0a0a",
                     border: "1px solid #262626",
