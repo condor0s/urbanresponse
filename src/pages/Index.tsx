@@ -125,10 +125,12 @@ const Index = () => {
 
       {/* Who It's For */}
       <Section background="darker">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "60px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "60px" }}>
           {/* For Who */}
           <div 
             style={{ 
+              flex: "1 1 280px",
+              minWidth: "min(100%, 280px)",
               padding: "50px", 
               backgroundColor: "#141414", 
               borderRadius: "4px",
@@ -159,6 +161,8 @@ const Index = () => {
           {/* Not For */}
           <div 
             style={{ 
+              flex: "1 1 280px",
+              minWidth: "min(100%, 280px)",
               padding: "50px", 
               backgroundColor: "#141414", 
               borderRadius: "4px",
@@ -189,7 +193,7 @@ const Index = () => {
 
       {/* Training Structure */}
       <Section subtitle="Πώς γίνεται" title="Η Εκπαίδευση" background="dark">
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "24px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
           {[
             { number: "01", title: "Επίπεδα", desc: "Levels 1-5" },
             { number: "02", title: "Σενάρια", desc: "Scenario-based training" },
@@ -199,6 +203,8 @@ const Index = () => {
             <div 
               key={i}
               style={{ 
+                flex: "1 1 160px",
+                minWidth: "min(calc(50% - 12px), 160px)",
                 padding: "40px 24px", 
                 backgroundColor: "#141414", 
                 borderRadius: "4px",
@@ -248,7 +254,7 @@ const Index = () => {
             </h2>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px", maxWidth: "800px", margin: "0 auto" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", maxWidth: "800px", margin: "0 auto" }}>
             {[
               "Γιατί τα περισσότερα περιστατικά αποφεύγονται",
               "Γιατί η απόφαση είναι πιο σημαντική από την τεχνική",
@@ -258,6 +264,8 @@ const Index = () => {
               <div 
                 key={i}
                 style={{
+                  flex: "1 1 300px",
+                  minWidth: "min(100%, 300px)",
                   display: "flex",
                   alignItems: "center",
                   gap: "16px",
