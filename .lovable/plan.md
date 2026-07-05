@@ -1,39 +1,26 @@
 ## Στόχος
-Δύο social banners σε editorial/composed στυλ (όχι απλό overlay) που επικοινωνούν το concept της ανάρτησης: «Η βία δεν είναι πάντα εμφανής — η πρόληψη ξεκινά από την παρατήρηση».
+Featured/OG image (1200×630) που αναπαράγει το hero του `/constitution` — background, emblem, orange divider + "Καταστατικό Λειτουργίας · Έκδοση 1.0", τίτλος, υπότιτλος — με σωστή αναφορά **Urban Response®** (με το ® σε εκθέτη) όπου εμφανίζεται το brand.
 
-## Παραδοτέα
-1. **Facebook τετράγωνο** — `1080×1080` → `/mnt/documents/urban-response-fb-square.jpg`
-2. **Instagram (νέο format)** — `1080×1350` (4:5 portrait, το νέο default του IG feed) → `/mnt/documents/urban-response-ig-portrait.jpg`
+## Πλάνο
 
-> Σημείωση: Το IG πλέον προωθεί επίσης 1080×1920 (full-bleed). Αν προτιμάς αυτό αντί για 4:5, πες το πριν την υλοποίηση.
+1. **Brand mark με ®**
+   - Στο hero markup δεν εμφανίζεται σήμερα το κείμενο "Urban Response" — το brand φαίνεται μόνο μέσω του emblem/logo. Θα προσθέσω μια μικρή γραμμή brand πάνω από το divider: `URBAN RESPONSE®` (το ® ως `<sup>` σε εκθέτη, μικρότερο μέγεθος, ίδιο orange accent) **μόνο στο render της OG image**, χωρίς να πειράξω το live hero της σελίδας.
+   - Εναλλακτικά, αν προτιμάς, να μπει και στο live hero.
 
-## Concept σύνθεσης (κοινό και για τα δύο)
-Editorial poster-style, όχι «φωτογραφία + κείμενο από πάνω». Δομή σε layers:
+2. **Render 1200×630 μέσω Playwright**
+   - Άνοιγμα `/constitution` σε viewport 1200×630.
+   - DOM injection της γραμμής `Urban Response®` για το screenshot.
+   - Element screenshot του hero `<section>` clipped στα 1200×630.
 
-- **Base layer**: Η φωτογραφία (σιλουέτες στο σοκάκι) σε desaturated cool blue, με σκούρο vignette και προσθήκη grain για film texture. Τοποθετημένη με crop ώστε οι σιλουέτες να μην καλύπτονται από το κείμενο.
-- **Cinematic overlay**: Σκούρο gradient (μαύρο→διαφανές) από πάνω και κάτω για να «κάθεται» το typography. Λεπτή πορτοκαλί scanline / accent γραμμή που διασχίζει τη σύνθεση.
-- **Targeting/observation motif**: Λεπτά γεωμετρικά crosshair brackets ([ ]) γύρω από μία σιλουέτα — οπτικοποιεί το «αναγνωρίζεις σημάδια / παρατήρηση». Σε διακριτικό πορτοκαλί #fe4e00, χαμηλό opacity.
-- **Typography stack** (Noto Sans Display, all-caps για τίτλο):
-  - Kicker: `URBAN RESPONSE®` (μικρό, tracked-out, λευκό)
-  - Headline: `Η ΒΙΑ ΔΕΝ ΕΙΝΑΙ ΠΑΝΤΑ ΕΜΦΑΝΗΣ.` (μεγάλο, condensed, λευκό — με τη λέξη «ΕΜΦΑΝΗΣ» σε πορτοκαλί ή με slash accent)
-  - Sub-line: `Η πρόληψη ξεκινά από την παρατήρηση.` (Inter, μεσαίο, ανοιχτό γκρι)
-  - Micro tags κάτω: `#Awareness  ·  #UrbanSafety  ·  #PersonalProtection`
-- **Logo**: Το επίσημο `Urban-Response®_Logo.png` (transparent) τοποθετημένο διακριτικά — κάτω-δεξιά για FB, κάτω-κέντρο για IG portrait. Μέγεθος ~12% του πλάτους, όχι dominant.
+3. **Αποθήκευση**
+   - `src/assets/constitution-og.jpg` (για χρήση ως og:image)
+   - `/mnt/documents/constitution-og.jpg` (για download)
 
-## Διαφοροποιήσεις ανά format
-- **FB 1080×1080**: Headline αριστερά, σιλουέτες δεξιά. Split balance.
-- **IG 1080×1350**: Vertical stack — φωτογραφία πάνω 60%, μαύρο typography block κάτω 40% με headline + sub + logo.
+4. **Meta tags (προαιρετικό)**
+   Το site είναι SPA, οπότε ο Facebook crawler δεν εκτελεί JS — τα OG tags πρέπει να μπουν στο `index.html`.
+   - **A)** Auto: προσθήκη `og:image` (+ og:title/description/type, twitter:card) στο `index.html` που δείχνει στη νέα εικόνα.
+   - **B)** Μόνο η εικόνα — τη βάζεις χειροκίνητα ως featured image στο FB post.
 
-## Τεχνική εκτέλεση
-- Python script με Pillow:
-  - Φόρτωση `/mnt/user-uploads/shutterstock_2711492055.jpg` και `/mnt/user-uploads/Urban-Response®_Logo-3.png`
-  - Color grade (desaturate + cool tint), vignette, grain noise
-  - Composite layers + γεωμετρικά brackets με `ImageDraw`
-  - Typography με Noto Sans / Inter (κατέβασμα από Google Fonts αν χρειαστεί)
-  - Export σε JPG quality 92
-- QA: View κάθε output, έλεγχος για overflow/legibility/contrast πριν παράδοση.
-
-## Τι ΔΕΝ θα κάνω
-- Δεν θα χρησιμοποιήσω imagegen (AI generation) — μόνο compositing της δικιάς σου φωτό + logo.
-- Δεν θα αλλάξω/επεξεργαστώ το logo.
-- Δεν θα αγγίξω website code.
+## Ερωτήσεις
+1. Το `Urban Response®` να μπει **μόνο στην OG image** ή και στο live hero της σελίδας;
+2. Προτιμάς **A** (auto OG tags στο site) ή **B** (μόνο η εικόνα);
