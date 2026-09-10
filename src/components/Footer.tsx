@@ -26,6 +26,7 @@ const Footer = () => {
                 { path: "/instructor", label: "Ο Εκπαιδευτής" },
                 { path: "/mission", label: "Αποστολή & Όραμα" },
                 { path: "/training-tracks", label: "Εκπαιδευτικές Διαδρομές" },
+                { path: "/international", label: "Urban Response® International" },
                 { path: "/faq", label: "FAQ" },
                 { path: "/constitution", label: "Καταστατικό" },
                 { path: "/contact", label: "Επικοινωνία" },

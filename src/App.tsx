@@ -11,6 +11,7 @@ import TrainingTracks from "./pages/TrainingTracks";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Constitution from "./pages/Constitution";
+import International from "./pages/International";
 import NotFound from "./pages/NotFound";
 
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/constitution" element={<Constitution />} />
+          <Route path="/international" element={<International />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
